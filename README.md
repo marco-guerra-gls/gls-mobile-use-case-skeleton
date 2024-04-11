@@ -26,13 +26,13 @@ Showcase interoperability between Java and Kotlin. Here's an outline of tasks:
 	- **<u>Zip code</u>**: String
 - **Kotlin**: Create a <u>data class</u> named **Parcel** with the following fields:
 	- **<u>Id</u>**: long
-	- **<u>Type</u>**: enum of PARCEL, EXPRESS
+	- **<u>Type</u>**: enum of STANDARD, EXPRESS
 	- **<u>ShippperAddress</u>**: Address (optional)
 	- **<u>ShippingAddress</u>**: Address (optional)
 - **Java class**: Create a method named **getFormattedAddress** that return the address fields in the following format:
 
-**[Street]
-[Shipper City], [Shipper Zip Code] -> [Shipping City], [Shipping Zip Code]**
+**[Street]<br/>
+[City], [Zip Code]**
 
 - **Hardcoded data**: Create a composable on **Parcel List** screen that presents the information of the following hardcoded **Parcel** object:
 
@@ -61,7 +61,7 @@ Create the following components:
 Simulate data fetching from the network using Coroutines:
 - **Fetching Data**: Write a function that simulates fetching data from **ParcelRepository** as if it was an API endpoint. This might be as simple as a function that includes delay for a few seconds before returning the list of Parcels.
 - **Loading Indicator**: Show a loading indicator on the UI after the user presses the button and until the data is fetched and displayed.
-- **Handle Exceptions**: Introduce a random possibility of the data fetch failing and throwing an exception. Use exception handling in your Coroutine to display a failure message to the user when this happens.
+- **Handle Exceptions**: Introduce a random possibility of the data fetch failing and throwing an exception. Use exception handling in your Coroutine to display a failure message (“Random network exception occurred!") to the user when this happens.
 
 <img src="images/Screenshot_20240404_080306.png" alt="image" width="300" height="auto"> <img src="images/Screenshot_20240404_080723.png" alt="image" width="300" height="auto">
 
